@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { addCategory } from '../controllers/categoryController';
 
-const categoryRoutes = Router();
+const router = Router();
 
-categoryRoutes.post('/categories', addCategory);  // Make sure this matches the frontend URL
+router.post('/', addCategory); // Matches POST requests to '/api/categories'
 
-export default categoryRoutes;
+export default router;
