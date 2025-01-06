@@ -10,8 +10,10 @@ export const AppDataSource = new DataSource({
   host: "localhost",
   port: 5432,
   username: "postgres",
-  password: "yourpassword",
-  database: "RealOnlineStore",
+  // password: "yourpassword",
+  password: "postgres",
+  // database: "RealOnlineStore",
+  database: "realonlinestore",
   entities: [Product, Inventory, Category, Customer],
   migrations: ["src/migrations/*.ts"],
   synchronize: true, // Use migrations for schema updates

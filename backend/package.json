@@ -4,7 +4,7 @@
   "main": "server.ts",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node -r tsconfig-paths/register ./src/app.ts",
+    "start": "tsc && ts-node -r tsconfig-paths/register ./src/app.ts",
     "migration:run": "ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d src/data-source.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

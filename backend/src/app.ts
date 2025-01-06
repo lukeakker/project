@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());  // Use express's built-in json parser
 
 // Register routes for different resources
-app.use('/api', categoryRoutes);
+app.use('/api/categories', categoryRoutes);
 app.use('/api/customers', customerRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/inventory', inventoryRoutes);

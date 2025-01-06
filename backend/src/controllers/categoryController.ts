@@ -5,7 +5,7 @@ import { Category } from '../entities/Category';
 
 export const addCategory = async (req: Request, res: Response): Promise<void> => {
   console.log("Request 100000000000000000 received"); // Check if backend is receiving the request
-  const { name } = req.body;
+  const { name } = req.body;  // this is categoryData from the frontend
 
   if (!name) {
     res.status(400).json({ message: 'Name is required' });

@@ -24,7 +24,7 @@ const AddCustomerForm = () => {
     setSuccess(null);
 
     try {
-      const response = await axios.post('http://localhost:3000/admin/customer', formData);
+      await axios.post('http://localhost:3001/api/customers', formData);
       setSuccess('Customer added successfully!');
       setFormData({
         first_name: '',

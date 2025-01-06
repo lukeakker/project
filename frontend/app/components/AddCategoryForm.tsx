@@ -18,7 +18,7 @@ const AddCategoryForm = () => {
     console.log('Submitting category data:', name); // Check the data
 
     try {
-      const response = await axios.post('http://localhost:3000/admin/category', categoryData, {
+      const response = await axios.post('http://localhost:3001/api/categories', categoryData, {
         
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const AddCategoryForm = () => {
       
       setSuccess('Category added successfully!');
       setName('');
-    } catch (error: any) {
+    } catch (error) {
       // Enhanced error logging
       console.error('Error details:', error);
       console.error('Response:', error.response);
